@@ -1,0 +1,55 @@
+What are conditional statements?
+Conditional statements define the actions a program takes based on certain conditions. It’s a little like proposing a scientific hypothesis; the condition proves to be either true or false.
+
+Conditional statements
+ 23m
+Topic 1 introduced you to the basics of Python, including keywords. Then, you explored a variety of programming fundamentals in Topic 2, such as declaring variables, operators, and Booleans. 
+
+This knowledge will be very helpful as you now learn about conditional statements, an element that allows a program to make decisions and execute different blocks of code based on specified conditions. 
+
+Until this point, your programs have all been simple programs that run from start to end. Once we learn conditional statements, we will have more control over which parts of the program run and when. 
+
+What are conditional statements?
+Conditional statements define the actions a program takes based on certain conditions. It’s a little like proposing a scientific hypothesis; the condition proves to be either true or false.
+
+
+Watch Conditionals: If and If/Else Statements (Code.org, 2018) (1:11)  
+Footnote 1.
+Code.org. (2018, May 18). Conditionals: If and if/else statements [Video]. YouTube. https://www.youtube.com/watch?v=sO4UYCbTxxo
+
+ to find out how understanding conditional statements can help you make sense of your code.
+
+
+ ENTER FULLSCREEN
+
+
+Python has the following conditional statements:
+
+if
+if...else…
+nested if
+if…elif (else if)… statements.
+
+Working with if statements
+ 30m
+If statements are the first piece of the conditional statements puzzle. If statements provide you with the ability to branch the code based on a condition. If you remember how Booleans worked from the previous section, that’s essentially how our conditions will work
+
+The pass statement
+ 25m
+The pass statement isn’t specifically related to if conditions, but it’s handy to learn it now since it can be used with our if conditions.
+
+The “pass” statement is another keyword in Python. It’s basically a placeholder for future code. You can use it when you are writing your code, but don’t yet want to write a particular section. 
+This can be quite helpful when making your if statements, and even more helpful when you learn about the else-if and else statements.
+
+
+Error control using if...else... statements
+ 60m
+Another common usage of the if...else... statement is to perform error checking. A common scenario for error checking is to check if the input is a number or a string.
+
+We often want to validate the user input to ensure they haven’t entered a value that we’re not expecting or might crash the program.
+
+For example, if we ask the user to enter a value between 1-100, and they enter “-1” or “2385” or even a string “hello” then we need to account for these situations.
+
+If we ask the user for a value and they don’t provide one, this can sometimes cause problems. For optional input, this is fine and you’ll handle this normally, but if you need the value to continue, you’ll need to show an error.
+
+
