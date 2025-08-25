@@ -1,0 +1,85 @@
+What are loops?
+Programs often contain blocks of code that are repeated several times. Rather than typing the same lines repeatedly, programmers use loops.
+
+The repeated execution of a block of statements is called iteration. Loops are iterative structures because a loop condition can be executed once, several times or forever, depending on the expression used for the loop. Each loop repetition is also referred to as an iteration.
+
+Python has two statements for iteration: the for statement and while statement. There are two loops used in Python: the for loop and the while loop.
+
+The best loop to use is determined by the predictability of the repetitions you need it to perform. Can you predict how many repetitions are needed, or is it unknown?
+
+If you know how many times a loop will be repeated, it is known as a deterministic loop.
+If the number of repetitions is unknown, this is a non-deterministic loop.
+In Python, the for loop is deterministic, the while loop is non-deterministic.
+
+Let’s take a closer look at the for and while loops.
+
+Keep in mind the difference between deterministic and non-deterministic loops as you learn how and when to use the while loop.
+
+Both the for loop and the while loop are used to execute a set of statements multiple times until a certain condition is met. A while loop is a way to repeat sections of code until some condition is false. It is non-deterministic because you do not need to determine the number of loops in advance of running the code. This can be useful when the loop is driven by a response from the user because you cannot predict exactly what their input will be (Khan Academy, n.d.).  
+Footnote 1.
+Khan Academy. (n.d.). Review: Looping. https://www.khanacademy.org/computing/computer-programming/programming/looping/a/review-looping
+
+
+
+The main structure of a while loop is as follows:
+
+while condition:
+           body of while loop that consists of normal Python statements.
+The structure is very simple. The body of the while loop (that could be anything) will keep executing as long as the condition is met (that is, the condition is true).
+
+Once the condition becomes false, the body of the while loop will not be executed and the next line of code after the while will be executed. The condition in the while loop is simply another Python statement that would yield a Boolean value of true or false.
+
+A while loop must have three components for it to operate as intended. They are as follows.
+
+Set the initial loop value that will be evaluated by the loop condition.
+The actual while loop with the condition to be evaluated using the loop value. We don’t know how many times the loop will execute. The only certainty is that at some point, the condition should evaluate to false to end the loop. This is the non-deterministic aspect of the while loop.
+A mechanism to update the loop value before it gets evaluated again.
+Note: The key to creating an effective while structure is to properly choose the exit condition.
+
+Breaking a loop
+If the loop condition is false, it will not run again and will end. However, sometimes you want to end the loop halfway through the block of code.
+
+You can end the loop at any time by using the break statement. This is another keyword in Python.
+
+When break is used, the code execution will immediately jump to after the loop.
+
+The continue statement
+Loops also have a statement to restart the loop: continue. This is another keyword in Python.
+
+This one is quite simple to understand. Whenever you call this statement; you will end the current iteration of the loop and go right back to the start (also checking if the loop condition is still true before doing another iteration).
+
+Example 3: Guessing game
+Let’s make a game where you think of a number and have three attempts to get it right. Of course, you can change the number of guesses.
+
+When programming, you will often find there is more than one way to solve a problem. There can be many solutions that answer a given problem, and you will develop the skill and experience to choose your preferred option.
+
+Before reading further and seeing the examples, try to make this game yourself. You should have all the tools you need already.
+
+Set a secret number, then give the user three chances to guess whether the number is correct; telling them if it’s high or low.
+
+The code below demonstrates two ways of implementing this program using while and if…else... statements.
+
+Range function
+ 30m
+Using the range() function
+Before exploring the for loop, we need to understand a built-in function called range(). This function is used to create a list containing a series of integers (numbers). The range can be used to provide the deterministic (known number of times we want to loop) aspect of a for loop, as we will know how many numbers there will be in the range before the loop is executed. The syntax of this function is as follows:
+
+range(start,end,step)
+
+
+
+For loops
+ 60m
+A for loop is a way to repeat code a set number of times. Because the repetitions (iterations) are determined in advance, the for loop is a deterministic or definite loop. For loops are useful when you need to repeat the same code in a set sequence; for example, printing a list.
+
+The syntax of a for loop is structured like this:
+
+for <var> in <iterable>:
+          <statements>
+
+The for loop is like the while loop, except as mentioned earlier, it has a preset amount of times it’s going to iterate. The for loop itself can iterate over a few different sequences. 
+We’re just using range for now but any sequence like lists, tuples, a string, or a dictionary work too. These are probably new terms, but you don’t need to worry about them for now. The important part to remember is the for list iterates through a sequence.
+
+Understanding the while loop, the for loop, and the range() function will enable you to effectively control program flow, perform iterative tasks, and manipulate sequences of data. They are fundamental constructs in programming and are used extensively in most programming languages.
+
+Loops can also be used with collections of ordered data, known as lists. Coming up next, you’ll learn how to use and manipulate lis
