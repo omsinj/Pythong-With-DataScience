@@ -1,0 +1,213 @@
+Modular programming
+ 15m
+Modular programming is a software design technique. It is the practice of breaking up a large piece of code into smaller, more structured blocks of code. These blocks of code become their own module or modules (techwithtim, n.d.).  
+Footnote 1.
+techwithtim. (n.d.). Introduction to modular programming. Techwithtim.Net. https://www.techwithtim.net/tutorials/python-programming/beginner-python-tutorials/introduction-to-modular-programming/
+
+
+These individual modules can be imported and put together like building blocks to create a larger application. They can also be reused for different projects.
+
+Modularising code in a large application has numerous benefits.
+
+Simplicity
+Rather than trying to write the code for the entire problem at hand, a module typically focuses on one relatively small portion of the problem. If you’re working on a single module, you’ll have a smaller problem domain to wrap your head around.
+
+Easier to scale
+Modular programming allows development to be divided by splitting down a program into smaller programs to execute a variety of tasks. This enables developers to work simultaneously and minimises the time taken for development. This makes development easier and less error-prone.
+
+Maintainability
+Modules are typically designed so that they enforce logical boundaries between different problem domains. If modules are written in a way that minimises interdependency, there is a decreased likelihood that modifications to a single module will have an impact on other parts of the program. (You may even be able to make changes to a module without having any knowledge of the application outside that module.) This makes it more viable for a team of many programmers to work collaboratively on a large application.
+
+Reusability
+Functionality defined in a single module can be easily reused (through an appropriately defined interface) by other parts of the application. This eliminates the need to duplicate code.
+
+Scoping
+Modules typically define a separate namespace, which helps avoid collisions between identifiers in different areas of a program.
+
+In short, modular coding makes programs more readable, scalable, and cleaner. It also eases debugging and fixing defects. In Python, a module can be any file containing functions and classes.
+
+What are functions?
+ 44m
+Functions are crucial for achieving modularity as they allow for repeated tasks to be carried out efficiently. Here are the key points.
+
+Functions let you reuse code, preventing duplication. You create it once and use it as much as needed.
+If a task reoccurs in your program, you can group the related code into a function. This function can be called as many times as required.
+The code within a function only runs when the function is called. For example, the print() function in Python simplifies displaying text on the screen.
+Functions in Python work in a similar way to those in other programming languages.
+For small programs, it’s manageable to have all the code in one block. However, for larger or more complex programs, it’s not practical.
+Functions help divide a large block of code into smaller, functional sections, making the code easier to read and modify.
+
+
+How functions work
+Imagine making a cake. You take ingredients (inputs), mix and bake them (process), and end up with a cake (output). This process is similar to a function.
+
+A function is a set of code that performs a specific task.
+It receives inputs, applies some actions, and can return outputs.
+Not all functions need to return outputs. Like posting a letter: you put the letter (input) in the post box (process), but there’s no output as such. So, some functions may not return anything after they’re executed.
+
+Calling a function
+Calling a function happens by writing its name, followed by the round parentheses.
+A function can be called many times.
+A function can be called from anywhere.
+The moment a function is called, the control goes to that function. Once the function is finished executing its block, the control returns to the very next line after the function call.
+
+Arguments and parameters
+ 60m
+What are arguments and parameters?
+Parameters are variables (identifiers) specified in the function definition.
+Arguments are values that are passed into the function within the function call (Neotam, 2020).  
+Footnote 1.
+Neotam. (2020, May 15). Types of function arguments in Python. getKT. https://getkt.com/blog/types-of-function-arguments-in-python/
+
+Arguments and parameters are used together within a function to make it more useful.
+
+Arguments and parameters
+ 60m
+What are arguments and parameters?
+Parameters are variables (identifiers) specified in the function definition.
+Arguments are values that are passed into the function within the function call (Neotam, 2020).  
+Footnote 1.
+Neotam. (2020, May 15). Types of function arguments in Python. getKT. https://getkt.com/blog/types-of-function-arguments-in-python/
+
+Arguments and parameters are used together within a function to make it more useful.
+
+
+
+
+
+To have more features within a function, we can pass arguments that could be used within the block code for the functions. 
+See the example below. This is the same example of the area of a circle, but now the bulk of the calculation is taking place inside a function.
+
+When you use the function called area_circle_calculator(), you give it a ‘radius’ value. This is known as an argument. An argument can be any type, like a set number or a variable.
+
+The function gets the radius value through a parameter, in this case, ‘r’. So, a parameter is something that takes the argument. Here, ‘r’ gets the radius value.
+
+Inside the area_circle_calculator() function, you can use this ‘r’ parameter just like a normal variable. It can be part of the calculations.
+
+Multiple arguments and parameters
+We can pass multiple arguments when calling a function. The following rules should be followed.
+
+The number of arguments should match the number of parameters. Argument number mismatch will be generated if this is not the case.
+By default, the argument-parameter association is one-to-one. This means that argument 1 will be received by parameter 1, argument 2 by parameter 2, and so on. Hence the sequence of the passing argument is important.
+Let's look at another example of functions to display personal information based on user input that requests multiple arguments.
+
+The first part of the program makes up a simple function with three parameters (meaning it will accept three arguments). The three arguments are provided by prompting the user for input. The input is then passed to the function for further processing.
+
+When working with functions, remember the following.
+
+You’re not restricted to using variables for data. You can also feed in specific values directly, just like when using the print() function.
+Variables are often used due to their convenience and flexibility.
+It’s possible to set default values for function parameters. This is useful when you want to run a function without providing certain arguments. This is optional and can be done for some or all parameters.
+
+Non-positional (keyword) arguments
+ 20m
+Keyword arguments in Python
+The use of keyword arguments is only to improve the code readability. There is no functional advantage of keyword arguments over positional arguments. As a rule, when coding, we mostly use positional arguments. However, when you have a readability problem, then use keyword arguments.
+
+Arguments are important. It is the term given to a value that’s passed to a function that expects one or more parameters. The order is not specific, and not all parameters require arguments. Therefore, they need to be named.
+
+A keyword argument is passed by its name, not position, in the function call. This means that:
+
+order is not important
+the value to be passed as argument must be preceded by the name of the variable that corresponds to the parameter.
+We’ve used a few examples of positional arguments with functions already.
+
+Let’s look at an example of using non-positional arguments.
+
+Returning functions
+ 60m
+What happens if you print the value of the function when it is called?
+
+When you call a function, the control of the program shifts to that function. Once the function finishes, control returns to the main code. At this point, the function can return a value. Take note of the following key points.
+
+You can specify the value or values you want the function to return.
+If the function doesn’t explicitly return a value using the return command, it will return None by default. This means the function hasn’t returned anything.
+So, if you try to print the result of calling a function that doesn’t return a value, you’ll see None as the output.
+
+Returning functions
+ 60m
+What happens if you print the value of the function when it is called?
+
+When you call a function, the control of the program shifts to that function. Once the function finishes, control returns to the main code. At this point, the function can return a value. Take note of the following key points.
+
+You can specify the value or values you want the function to return.
+If the function doesn’t explicitly return a value using the return command, it will return None by default. This means the function hasn’t returned anything.
+So, if you try to print the result of calling a function that doesn’t return a value, you’ll see None as the output.
+
+# Functioning returning
+ 
+def multiply_function(num1,num2):
+    result = num1 * num2
+    print(result)
+    # output = 15
+ 
+a = 5
+b = 3
+print(multiply_function(a,b))
+# output = None
+
+How to return values
+The keyword used to return a value is return. Here are some important points about return.
+
+Wherever the first return statement is encountered within the function code, the control goes back to the calling code. Anything after the return statement would be ignored.
+Multiple values can be returned using ‘,’ (comma). 
+Following up on the previous example, let us say we would like to display the result in the main code rather than inside the function. Then, we would modify the function as follows.
+
+Multiple functions
+To break larger blocks of codes, we can define multiple functions. Each function performs a certain task and you can expand the use of the keyword def, to multiple functions.
+
+Note that we use each function for a specific task. We could have created a function to calculate the area for both the circle and the square. However, since functions are reusable, we could call the same function for some other purpose.
+
+Let’s say later in the main code, we calculated the area of the circle using another radius value.
+
+Calling a function that calculates areas for both a circle and a square would lead to unnecessary calculations for the square’s area.
+But, if you use separate functions for each area calculation (like in our example), you can call just the circle function. This way, you avoid doing any unnecessary square area calculations.
+
+Functions calling location
+ 60m
+So far, we’ve seen functions being called from within the main code. In this section, examples are given to demonstrate calling from inside another function. 
+Now, with calling functions from other functions, the same principle is applied as before. The only point to consider here is the hierarchy of calling.
+
+Functions calling location
+ 60m
+So far, we’ve seen functions being called from within the main code. In this section, examples are given to demonstrate calling from inside another function. Now, with calling functions from other functions, the same principle is applied as before. The only point to consider here is the hierarchy of calling.
+
+Note that when you run a code, it starts with the main code. All function calls take place either directly or indirectly from the main code. This means that the final returned control should be with the main code. 
+
+The example below demonstrates this concept.
+
+
+
+
+In Fig 4.2, there are four functions. These functions are either called from the main code or from a function. The lighter blue arrow shows the control going from the calling function to another function, whereas the dark purple arrow shows the control going back to the calling function. The number on top of each arrow indicates the sequence number of the calling/returning action.
+
+It is evident from the figure that the first call takes place from the main code to function1(). This function in turn calls another function; that is, function(2). The forward calling of functions ends when function2() calls Function(4) (see line 4 of the function2() block). Once function(4) finishes executing its code, the control goes back to function2() at line 5. Once function2() reaches the end of code, the control goes back to function1() at line 3. When function(1) reaches the end of the code, the control goes back to line 3 of the main code.
+
+Hence, with appropriate function calls, the control should go back to the main code that initiated the function-calling procedure. 
+Note that such use of functions resembles a nested loop and is sometimes called nested functions. The coding example below implements Figure 4.2
+
+This piece of code is a bit confusing when you first look at it, but if you follow the code, it can help to give you a good understanding of how the control in the program flows. It is important to understand this as you use functions within functions.
+
+Compare the above output of the code with the flow of control figure. Note that whenever a function is called from inside the main code or some other function, the returning control will always be from the called function. For example, function1() called function2(), then the control will return back to function(1) from function(2) even though function3() and function4() are called from function2().
+
+When a function control does not return to the calling function, then the nested function becomes an infinite one. This is not desirable, as the program would never terminate appropriately. See a slight change in the above example that causes this behaviour.
+
+Variable scoping
+ 60m
+Two related key terms you’ll often come across in computer programming are scope and scoping. 
+
+Scope refers to the visibility or accessibility of variables, objects, functions, or other identifiers within a program. It determines where these identifiers can be accessed or used in the code. 
+
+Scoping refers to the process of determining the scope of variables or identifiers in a program. It involves understanding the rules and principles that govern how variables are accessed and the scope in which they are valid.
+
+In order to understand the scope of the variable, let’s discuss how Python is run. As shown below, the code is interpreted line by line, starting from line 1.
+
+Built-in functions
+ 15m
+You may remember seeing statements like functions before now. For instance, print(), input(), math.ceil(), str() and many more. These are all built-in functions. In Topic 4, we are writing our own.
+
+Built-in functions are functions created by experts, programmers and scientists in various fields for specific purposes.
+
+For instance, the print() function is responsible for displaying output. It takes a string argument. Similarly, math.ceil() is a function that takes input as a number to convert a number into the nearest integer.
+
+The codes for all these functions are stored in packages within Python. You can look at the code behind any of the built-in functions using VS Code. Simply highlight a function in your code and press Alt + F12 on your keyboard. Holding down ctrl and clicking on the function will also open the peek window.
