@@ -1,0 +1,74 @@
+Program Syllabus
+Week		Session	Topics Covered
+Week 1	Introduction to Python and IDEs, Basic Input/Output, Variables, and Data Types	Session 1	Overview of Python and its applications
+Setting up IDEs: VS Code and Jupyter Notebooks
+introduction to Version Control with Git
+Basic Input/Output, Variables, and Data Types 
+Strings, Expressions, and Statements <br> - Loops (For, While) and Conditional Statements (If-Else) 
+Functions and Variable Scope
+	Control Flow, Functions, and Basic Debugging Techniques	Session 2	Control Flow: Loops (For, While) and Conditional Statements (If-Else)
+Functions and the return statement 
+Basic Debugging Techniques and Tools
+Week 2	Introduction to OOP, Code Readability, and Documentation	Session 3	Introduction to OOP: Why OOP is important in Python 
+Classes and Objects: Creating Classes and Instances 
+Instance Variables and Methods 
+Constructor (init method) and self
+Code Readability and Documentation (Docstrings and Comments)
+	Advanced OOP Concepts and Introduction to Design Patterns	Session 4	Advanced OOP Concepts: Inheritance and Polymorphism 
+Overriding Methods and super() 
+Special Methods (e.g., str, repr) 
+Encapsulation: Private and Public Attributes
+Introduction to Design Patterns in OOP
+Week 3	Data Structures, Algorithm Complexity, and Big O Notation	Session 5	Working with Data Structures: Lists, Tuples, Sets, and Dictionaries 
+Advanced Functions: Map, Lambda, Filter, and Reduce 
+Regular Expressions with the re module
+Algorithm Complexity and Big O Notation
+	APIs, Web Scraping, and Data Collection Techniques	Session 6	Working with File I/O: Reading and Writing Files, CSVs 
+Handling Errors and Custom Exceptions 
+Introduction to the sys module and its uses
+Working with APIs and Web Scraping
+Week 4	SQL, NoSQL Databases, and Data Security Considerations	Session 7	File Handling in Python: Reading and Writing Files (Text, CSV, JSON) 
+Introduction to Databases and SQL 
+Interacting with Databases using sqlite3 and executing queries
+Introduction to NoSQL Databases (e.g., MongoDB)
+	Advanced SQL Queries and Database Optimisation Techniques	Session 8	Basic SQL: SELECT, WHERE, JOIN, GROUP BY
+Database Optimisation Techniques
+Interacting with databases via Python and SQL
+Week 5	NumPy and Pandas Basics, Data Visualization Principles	Session 9	NumPy Basics: Array creation, reshaping, slicing, and indexing 
+Aggregation: sum(), mean(), max(), min(), std() 
+Broadcasting and Masking with NumPy
+Pandas Basics: Creating Series and Data Frames from arrays/dictionaries 
+Accessing data from Data Frames (indexing, slicing, filtering) <
+Handling missing data and data types conversion
+Data Visualisation Principles and Best Practices
+	Advanced DataFrame Operations and Handling Large Datasets with Dask	Session 10	Advanced DataFrame operations: Merging, Concatenating, and GroupBy
+Aggregation functions (groupby, pivot tables)
+Data Cleaning and Transformation
+Working with Time Series Data in Pandas
+String Processing with Pandas: apply(), map(), and replace()
+Handling Large Datasets with Dask
+Week 6	Matplotlib and Storytelling with Data	Session 11	Matplotlib Basics: Creating basic plots (line, bar, scatter, histograms) 
+Customising plots: titles, labels, legends, axes
+Storytelling with Data and Creating Compelling Narratives
+	Advanced Visualisation with Seaborn and Interactive Dashboards with Dash	Session 12	Advanced Visualisation with Seaborn: Heatmaps, Pairplots, and Distribution plots 
+Using Plotly for Interactive Plots 
+Introduction to visualizing data using Python’s Altair library
+Interactive Dashboards with Dash or Bokeh
+Week 7	Introduction to Machine Learning, Ethical Considerations	Session 13	Introduction to Machine Learning: What is ML? Supervised vs. Unsupervised Learning 
+Basic Machine Learning Workflow: Data Preprocessing, Model Training, Evaluation 
+Introduction to scikit-learn: Basic Tools for Machine Learning in Python
+Ethical Considerations in Machine Learning
+	Advanced Machine Learning Topics and Introduction to Deep Learning	Session 14	Types of Machine Learning Models: 
+Supervised Learning: Classification and Regression 
+Unsupervised Learning: Clustering (e.g., K-Means) 
+Introduction to Deep Learning and Neural Networks
+Model Evaluation: Cross-validation, Accuracy, Precision, Recall
+Week 8	Building Interactive Applications with Streamlit and Flask	Session 15	Introduction to Streamlit: Building interactive web applications for data analysis 
+Exploring Other Web Frameworks like Flask
+Creating dashboards and simple apps with Streamlit
+	Simple Graphical User Interfaces (GUIs)	Session 16	Introduction to Tkinter: Building GUIs for Python applications 
+Creating simple applications that display data and interact with users 
+Project Discussion: Outlining steps for the final project (Data Analysis, Visualisation, or App)
+
+			
+
