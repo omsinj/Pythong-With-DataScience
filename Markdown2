@@ -1,0 +1,274 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Session 3 – Data Structures, Algorithm Complexity, and Big O Notation\n",
+    "\n",
+    "**Instructor:** Your Name  \n",
+    "**Date:** 2025-08-21\n",
+    "\n",
+    "---\n",
+    "\n",
+    "Welcome to Session 3! Today we will dive deep into Python's data structures and learn how to reason about program efficiency. Think of it as organizing a **factory warehouse**: knowing where things are stored and how to access them efficiently will make everything run smoothly."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 1. Lists – The Flexible Shelf\n",
+    "\n",
+    "### Concept:\n",
+    "- Ordered and mutable sequences.\n",
+    "- Ideal for storing items that can change frequently.\n",
+    "\n",
+    "### Analogy:\n",
+    "Imagine a set of adjustable shelves in a warehouse where you can add, remove, or reorder items at will.\n",
+    "\n",
+    "### Technical Notes:\n",
+    "- Access by index: O(1)\n",
+    "- Searching for an element: O(n)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "metadata": {},
+   "source": [
+    "# List example\n",
+    "tools = ['hammer', 'screwdriver', 'wrench']\n",
+    "tools.append('pliers')  # Add a new tool\n",
+    "tools.remove('wrench')  # Remove a tool\n",
+    "print('Current tools on shelf:', tools)"
+   ],
+   "execution_count": null,
+   "outputs": []
+  },
+  {
+   "cell_type": "code",
+   "metadata": {},
+   "source": [
+    "# Visualizing list as shelves\n",
+    "import matplotlib.pyplot as plt\n",
+    "tools = ['hammer', 'screwdriver', 'pliers']\n",
+    "fig, ax = plt.subplots(figsize=(6,1))\n",
+    "ax.barh([0]*len(tools), [1]*len(tools), tick_label=tools, color='skyblue')\n",
+    "ax.set_xlim(0,1)\n",
+    "ax.set_yticks([])\n",
+    "ax.set_title('List Visualization – Each item is a shelf')\n",
+    "plt.show()"
+   ],
+   "execution_count": null,
+   "outputs": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 2. Tuples – The Locked Box\n",
+    "\n",
+    "### Concept:\n",
+    "- Ordered and immutable sequences.\n",
+    "- Perfect for data that should never change.\n",
+    "\n",
+    "### Analogy:\n",
+    "Sealed boxes with instructions inside. You can see the contents but cannot modify them.\n",
+    "\n",
+    "### Technical Notes:\n",
+    "- Faster than lists for iteration because of immutability."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "metadata": {},
+   "source": [
+    "machine_settings = (100, 200, 300)\n",
+    "print('Machine settings tuple:', machine_settings)"
+   ],
+   "execution_count": null,
+   "outputs": []
+  },
+  {
+   "cell_type": "code",
+   "metadata": {},
+   "source": [
+    "# Visualize tuple as sealed boxes\n",
+    "labels = ['Speed', 'Power', 'Temperature']\n",
+    "values = list(machine_settings)\n",
+    "fig, ax = plt.subplots(figsize=(6,1))\n",
+    "ax.barh([0]*len(values), values, tick_label=labels, color='lightgreen')\n",
+    "ax.set_yticks([])\n",
+    "ax.set_title('Tuple Visualization – Immutable sealed boxes')\n",
+    "plt.show()"
+   ],
+   "execution_count": null,
+   "outputs": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 3. Sets – The Unique ID System\n",
+    "\n",
+    "### Concept:\n",
+    "- Unordered collections of unique elements.\n",
+    "- Excellent for de-duplication and membership tests.\n",
+    "\n",
+    "### Analogy:\n",
+    "Each worker gets a unique ID card. No duplicates allowed.\n",
+    "\n",
+    "### Technical Notes:\n",
+    "- Average lookup: O(1)\n",
+    "- No order guarantee"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "metadata": {},
+   "source": [
+    "workers = {'Alice', 'Bob', 'Charlie'}\n",
+    "workers.add('Alice')  # Duplicate ignored\n",
+    "print('Unique workers:', workers)"
+   ],
+   "execution_count": null,
+   "outputs": []
+  },
+  {
+   "cell_type": "code",
+   "metadata": {},
+   "source": [
+    "# Visualize set as ID cards\n",
+    "import networkx as nx\n",
+    "G = nx.Graph()\n",
+    "for worker in workers:\n",
+    "    G.add_node(worker)\n",
+    "pos = nx.circular_layout(G)\n",
+    "nx.draw(G, pos, with_labels=True, node_color='orange', node_size=1500)\n",
+    "plt.title('Set Visualization – Unique IDs')\n",
+    "plt.show()"
+   ],
+   "execution_count": null,
+   "outputs": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 4. Dictionaries – The Smart Catalog\n",
+    "\n",
+    "### Concept:\n",
+    "- Key-value pairs for fast lookup.\n",
+    "- Ideal for structured data.\n",
+    "\n",
+    "### Analogy:\n",
+    "A warehouse catalog: enter a part number and instantly see the description and quantity.\n",
+    "\n",
+    "### Technical Notes:\n",
+    "- Lookup by key: O(1)\n",
+    "- Insertion/deletion: O(1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "metadata": {},
+   "source": [
+    "parts_catalog = {'bolt': 100, 'nut': 200, 'screw': 300}\n",
+    "print('Price of a nut:', parts_catalog['nut'])"
+   ],
+   "execution_count": null,
+   "outputs": []
+  },
+  {
+   "cell_type": "code",
+   "metadata": {},
+   "source": [
+    "# Visualize dictionary as key-value mapping\n",
+    "fig, ax = plt.subplots()\n",
+    "keys = list(parts_catalog.keys())\n",
+    "values = list(parts_catalog.values())\n",
+    "ax.bar(keys, values, color='violet')\n",
+    "ax.set_title('Dictionary Visualization – Key:Value mapping')\n",
+    "ax.set_ylabel('Price')\n",
+    "plt.show()"
+   ],
+   "execution_count": null,
+   "outputs": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 5. Algorithm Complexity and Big O Notation\n",
+    "\n",
+    "### Concept:\n",
+    "Describes how runtime or memory grows with input size.\n",
+    "\n",
+    "### Analogy:\n",
+    "Finding a defective part on a conveyor belt:\n",
+    "- Walk once: O(n)\n",
+    "- Check a checklist: O(1)\n",
+    "- Nested comparison: O(n²)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "metadata": {},
+   "source": [
+    "import time\n",
+    "numbers_list = list(range(10000))\n",
+    "numbers_set = set(numbers_list)\n",
+    "\n",
+    "# Lookup in list\n",
+    "start = time.time()\n",
+    "9999 in numbers_list\n",
+    "print('List lookup time:', time.time() - start)\n",
+    "\n",
+    "# Lookup in set\n",
+    "start = time.time()\n",
+    "9999 in numbers_set\n",
+    "print('Set lookup time:', time.time() - start)"
+   ],
+   "execution_count": null,
+   "outputs": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Big O Summary Table\n",
+    "\n",
+    "| Big O | Description | Example |\n",
+    "|-------|------------|---------|\n",
+    "| O(1)  | Constant   | Grab an item from a known shelf |\n",
+    "| O(n)  | Linear     | Walk a row to find an item |\n",
+    "| O(n²) | Quadratic  | Compare every part to every other |\n",
+    "| O(log n) | Logarithmic | Binary search in sorted data |"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 6. Interactive Exercises\n",
+    "\n",
+    "Refer to the previous exercises section for:\n",
+    "- Lists, Tuples, Sets, Dictionaries\n",
+    "- Algorithm timing\n",
+    "- Hands-on practice"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "name": "python3",
+   "display_name": "Python 3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3.11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
